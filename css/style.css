@@ -118,6 +118,21 @@ body {
   align-items: center;
 }
 
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #404bbf;
+  border-radius: 2px;
+  left: 0;
+  bottom: 10px;
+}
+
 .menu-nav.list {
   font-weight: 500;
   list-style-type: none;
@@ -466,6 +481,11 @@ body {
 .work-items:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translate(0);
+}
+
+.work-items:hover .work-cover-block {
+  transform: translate(0);
 }
 .work.list {
   display: flex;
@@ -485,6 +505,31 @@ body {
   padding-right: 8px;
   border-top: none;
   padding: 32px 16px;
+}
+
+.work-img-overflow {
+  position: relative;
+  overflow: hidden;
+}
+.work-cover-block {
+  position: absolute;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-cover-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
 }
 
 .filt-btn {
@@ -522,4 +567,50 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-fontcolor);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.7);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 408px;
+  min-height: 584px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #999999;
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
