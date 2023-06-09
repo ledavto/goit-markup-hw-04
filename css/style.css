@@ -13,6 +13,7 @@
   --project-fontcolor: #2e2f42;
   --collor-button: #e7e9fc;
   --footer-color: #ffffff;
+  --color-customers:#8e8f99;
 }
 
 h1,
@@ -73,6 +74,7 @@ body {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container.header-container {
@@ -138,6 +140,7 @@ body {
   font-weight: 500;
   list-style-type: none;
   margin-left: 76px;
+  color: #404bbf;
 }
 .menu-nav.link {
   letter-spacing: 0.02em;
@@ -387,7 +390,8 @@ body {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: calc((100% - 120px) / 6);
-  
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .customers.list {
   display: flex;
@@ -411,27 +415,30 @@ body {
   border-radius: 4px;
   border: 1px solid #8e8f99;
   border-color: #8e8f99;
+  color: var(--color-customers);
   }
+
 .customers.link:hover .icon-customers,
-.customers.link:hover {
+.customers.link:hover,
+.customers.link:focus {
   color: #404bbf;
   border-color: #404bbf;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .icon-customers {
   color: #8e8f99;
   fill: currentColor;
-}
-
-.customers-item:hover,
-.customers-item:focus {
+  
 }
 
 .footer-social {
   margin-left: 120px;
   max-width: 208px;
+}
+
+.social-foter.list {
+  display: flex;
+  gap: 16px;
 }
 
 .pref-text {
@@ -444,7 +451,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
   padding: 100px 0;
 }
 
-.footer .container {
+.footer.container {
   display: flex;
   align-items: baseline;
   margin-right: 120px;
@@ -461,13 +468,13 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
   letter-spacing: 0.02em;
   color: #f4f4fd;
   font-weight: 500;
-  color: var(--)
+  color: var(--footer-color);
   margin-bottom: 16px;
 }
 
-.logo-footer var(--footer-color);  display: inline-block;
+.logo-footer {  
+  display: inline-block;
   margin-bottom: 16px;
-
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
