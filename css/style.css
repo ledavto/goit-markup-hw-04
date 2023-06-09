@@ -12,6 +12,7 @@
   --btnBGcolor: #f4f4fd;
   --project-fontcolor: #2e2f42;
   --collor-button: #e7e9fc;
+  --footer-color: #ffffff;
 }
 
 h1,
@@ -130,7 +131,7 @@ body {
   background: #404bbf;
   border-radius: 2px;
   left: 0;
-  bottom: 10px;
+   bottom: -1px;
 }
 
 .menu-nav.list {
@@ -196,6 +197,9 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: 1440px;
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-text {
@@ -214,6 +218,7 @@ body {
   display: block;
   margin: 0 auto;
   min-width: 169px;
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button,
@@ -270,7 +275,11 @@ body {
   background: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
-  padding: 24px 100px;
+   height: 112px;
+  /* padding: 24px 100px; */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 .pref-icon {
@@ -323,7 +332,7 @@ body {
   gap: 24px;
 }
 .card-content {
-  padding: 32px 16px 32px;
+  padding: 32px 0;
 }
 .team-item {
   background-color: #ffffff;
@@ -331,6 +340,10 @@ body {
   width: calc((100% - 24px * 3) / 4);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.social-items{
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-name-group {
@@ -343,33 +356,38 @@ body {
   margin-bottom: 8px;
 }
 .social-link {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background-color: #404bbf;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: 100%;
+   width: 100%;
+  border-radius: 50%;
   padding: 12px;
+   background-color: var(--btncolor);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
-  background: #31d0aa;
+  background-color: #404bbf;
 }
 
 .social.list {
   display: flex;
   gap: 24px;
   margin-top: 8px;
+  justify-content: center;
 }
 .icon-social {
   color: #f4f4fd;
-  fill: currentColor;
+  fill: var(--btnBGcolor);
 }
 /* --------------------SECTION 5 ------- */
 .customers-item {
   height: 88px;
-  width: 168px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  width: calc((100% - 120px) / 6);
+  
 }
 .customers.list {
   display: flex;
@@ -385,7 +403,6 @@ body {
 
 .customers.link {
   background-color: #ffffff;
-  /* width: calc((100% - 24px * 5) / 6); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -394,11 +411,13 @@ body {
   border-radius: 4px;
   border: 1px solid #8e8f99;
   border-color: #8e8f99;
-}
+  }
 .customers.link:hover .icon-customers,
 .customers.link:hover {
   color: #404bbf;
   border-color: #404bbf;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .icon-customers {
@@ -427,6 +446,8 @@ body {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
+  margin-right: 120px;
 }
 .footer-text {
   line-height: 1.5;
@@ -439,11 +460,12 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  font-weight: 500;
+  color: var(--)
   margin-bottom: 16px;
 }
 
-.logo-footer {
-  display: inline-block;
+.logo-footer var(--footer-color);  display: inline-block;
   margin-bottom: 16px;
 
   font-family: "Raleway", sans-serif;
@@ -548,9 +570,15 @@ body {
   color: #ffffff;
   background-color: #404bbf;
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .project.link {
   text-decoration: none;
+  display: block;
+}
+.project.link:hover,
+.project.link:focus{
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-text {
@@ -587,10 +615,10 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 408px;
   min-height: 584px;
-  background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  background-color: rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
 }
 
 .backdrop.is-hidden .modal {
@@ -607,10 +635,33 @@ body {
   border-radius: 12px;
   background-color: transparent;
   cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus{
+  background-color: #404bbf;
+  border: none;
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.icon-modal-btn{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-modal-btn:hover,
+.icon-modal-btn:focus{
+  fill: #ffffff;
 }
