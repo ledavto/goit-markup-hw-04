@@ -391,8 +391,6 @@ body {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: calc((100% - 120px) / 6);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers.list {
   display: flex;
@@ -417,6 +415,8 @@ body {
   border: 1px solid #8e8f99;
   border-color: #8e8f99;
   color: var(--color-customers);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover .icon-customers,
