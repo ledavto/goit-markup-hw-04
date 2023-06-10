@@ -361,7 +361,7 @@ body {
 .social-link {
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -405,7 +405,7 @@ body {
   padding-bottom: 120px;
 }
 
-.customers.link {
+.customers-link {
   background-color: #ffffff;
   height: 100%;
   width: 100%;
@@ -418,9 +418,9 @@ body {
   color: var(--color-customers);
 }
 
-.customers.link:hover .icon-customers,
-.customers.link:hover,
-.customers.link:focus {
+.customers-link:hover .icon-customers,
+.customers-link:hover,
+.customers-link:focus {
   color: #404bbf;
   border-color: #404bbf;
 }
