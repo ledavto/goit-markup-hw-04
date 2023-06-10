@@ -388,8 +388,6 @@ body {
 .customers-item {
   height: 88px;
   width: 168px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
   width: calc((100% - 120px) / 6);
 }
 .customers.list {
@@ -427,7 +425,6 @@ body {
 }
 
 .icon-customers {
-  color: #8e8f99;
   fill: currentColor;
 }
 
